@@ -1,0 +1,59 @@
+﻿@model Survey;
+
+<div>
+    <form asp-action="result" asp-controller="Home" method="post">
+        <div>
+            <div class="form-group row">
+                <span asp-validation-for="Name"></span>
+                <label class="col-sm-2 col-form-label" asp-for="Name"></label>
+                <div class="col-sm-5">
+                    <input class="form-control" asp-for="Name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Dojo"></label>
+                <div class="col-sm-4">
+                    <select class="form-control" asp-for="Dojo">
+                        <option value="Arlington">Arlington</option>
+                        <option value="Bellevue">Bellevue</option>
+                        <option value="Boise">Boise</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="LA">LA</option>
+                        <option value="Oakland">Oakland</option>
+                        <option value="Oc">OC</option>
+                        <option value="San Jose">San Jose</option>
+                        <option value="Tulsa">Tulsa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="FavoriteLanguage"></label>
+                <div class="col-sm-4">
+                    <select class="form-control" asp-for="FavoriteLanguage">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="C#">C#</option>
+                        <option value="Java">Java</option>
+                        <option value="jQuery">jQuery</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="React">React</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Sass">Angular</option>
+                        <option value="WordPress">WordPress</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <span asp-validation-for="Comment"></span>
+
+                <label class="col-sm-3 col-form-label" asp-for="Comment"></label><br>
+                <div class="col-sm-4">
+                    <textarea asp-for="Comment" class="form-control"></textarea>
+                </div>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit" />
+    </form>
+</div>

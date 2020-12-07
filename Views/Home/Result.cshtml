@@ -1,0 +1,19 @@
+@model Survey;
+
+    <div style="border: 2px solid black; width:300px; margin:10px; padding:10px;">
+        <h3><u>Submitted Info</u></h3>
+        <div class="yep">
+            <p>Name: @Model.Name</p>
+        </div>
+        <div class="yep">
+            <p>Dojo Location: @Model.Dojo</p>
+        </div>
+        <div class="yep">
+            <p>Favorite Language: @Model.FavoriteLanguage</p>
+        </div>
+        @if (Model.Comment != null)
+        {
+                <p>Comment: @Model.Comment</p>
+        }
+        <a class="btn btn-primary" href="/"> Go Back </a>
+    </div>
